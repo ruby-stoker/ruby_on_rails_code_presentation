@@ -1,0 +1,15 @@
+.col-sm-12.profile-main.tab-content
+  #general.colform.tab-pane.active{ role: 'tabpanel' }
+    .column-title= "Club #{@club.name}"
+    %table.table.table-striped
+      %tr
+        %th= t('backoffice.name')
+        %td= @club.name
+      %tr
+        %th= t('backoffice.subdomain')
+        %td= @club.subdomain
+      %tr
+        %th= t('backoffice.about')
+        %td= @club.about
+
+    =link_to 'Edit', edit_backoffice_club_path(@club), class: 'btn btn-primary pull-right'

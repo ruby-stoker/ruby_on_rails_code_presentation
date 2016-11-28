@@ -1,0 +1,8 @@
+.column-title Dashboard
+%ul.nav.nav-tabs.button-list
+  %li{ class: 'active' }
+    = link_to t('backoffice.general'), backoffice_dashboard_path, class: 'btn btn-block btn-link'
+  %li
+    = link_to t('backoffice.clubs'), backoffice_clubs_path, class: 'btn btn-block btn-link'
+  %li
+    = link_to t('backoffice.users'), backoffice_users_path, class: 'btn btn-block btn-link'

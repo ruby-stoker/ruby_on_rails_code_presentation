@@ -1,0 +1,12 @@
+.breadcrumb
+  =link_to 'Backoffice', backoffice_dashboard_path
+  %i.fa.fa-long-arrow-right{ 'aria-hidden': true }
+  %strong Dashboard
+.row
+  .col-sm-4.side-menu-left-menu.profile-side
+    = render partial: 'backoffice/dashboards/partials/left_menu'
+  .col-sm-8
+    .column-title
+      = t('backoffice.general')
+    .discussion-placehold
+      = t('backoffice.dashdoard_welcome')

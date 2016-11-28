@@ -1,0 +1,197 @@
+textarea {
+  resize: none;
+}
+.discussion-form {
+  border-bottom: 1px solid #e1e5e9;
+}
+.side-menu-left-menu .checkbox,
+.side-menu-discussion-filters .checkbox,
+.side-menu-folders-filters .checkbox {
+  margin: 0 0 10px;
+}
+.fa-2 {
+  font-size: 2em;
+}
+.fa-3 {
+  font-size: 4em;
+}
+.fa-4 {
+  font-size: 7em;
+}
+.column-title,
+.side-menu-filters-title,
+.discussion-form-title,
+.profile-form-title,
+.folders-form-title {
+  font-size: 16px;
+  color: rgb( 129, 146, 160 );
+  line-height: 1.9;
+  padding-bottom: 0;
+  border-bottom: 1px solid #e1e5e9;
+  margin-bottom: 10px;
+}
+.column-title,
+.side-menu-left-menu,
+.discussion-form-title,
+.side-menu-folders-filters,
+.side-menu-discussion-filters,
+.folders-form-title {
+  margin-top: 0;
+  margin-bottom: 19px;
+}
+.breadcrumb {
+  border-bottom: 1px solid #E1E5E9;
+  margin-bottom: 22px;
+  padding-left: 0;
+  color: #525F70;
+}
+form .form-group {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.folders-form .form-group:last-child{
+  margin-bottom: 0;
+}
+.discussion-form,
+.folders-form {
+  padding-bottom: 20px;
+  margin-bottom: 18px;
+}
+.control-large {
+  height: 40px;
+}
+.btn.control-large {
+  line-height: 27px;
+}
+.discussion-item {
+  margin-bottom: 18px;
+}
+.media {
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #E1E5E9;
+  position: relative;
+}
+.discussion-item:last-child,
+.media:last-child  {
+  border-bottom: 0;
+}
+.discussion-title, .thirdheading  {
+  color: #8192a0;
+  margin-bottom: 21px;
+  margin-top: 0;
+}
+.thirdheading {
+  font-size: 14px;
+}
+.thirdheading strong{
+  font-size: 16px;
+}
+.media .thirdheading {
+  font-size: 12px;
+}
+.media .thirdheading strong{
+  font-size: 14px;
+}
+.thirdheading a{
+  color: #8192a0;
+}
+.thirdheading a:hover{
+  text-decoration: none;
+}
+.discussion-title strong,
+.discussion-text h4 {
+  font-size: 14px;
+}
+.discussion-title strong,
+.discussion-text h4,
+.thirdheading strong{
+  color: #192c3d;
+  margin-top: 0;
+}
+.media-heading {
+  color: #192c3d;
+  font-size: 14px;
+  margin-top: 0;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.discussion-item p:last-child {
+  margin-bottom: 0;
+}
+.discussion-item p,
+.media-body {
+  font-size: 14px;
+  color: rgb( 75, 94, 113 );
+  line-height: 1.5;
+  margin-bottom: 3px;
+}
+.timeago {
+  font-size: 12px;
+  color: rgb( 129, 146, 160 );
+  line-height: 2;
+}
+.discussion-text h4 {
+  margin-bottom: 12px;
+}
+.discussion-image,
+.discussion-text {
+  margin-bottom: 14px;
+}
+.media img {
+  max-width: 80px;
+}
+.search-bar {
+  margin-bottom: 28px;
+}
+.icon-edit {
+  display: block;
+  border-width: 1px;
+  border-color: rgb( 224, 230, 234 );
+  background: #fff;
+  border-style: solid;
+  border-radius: 3px;
+  width: 29px;
+  height: 29px;
+  line-height: 34px;
+  text-align: center;
+}
+.icon-edit:after {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(icon-edit.png);
+  z-index: 2;
+}
+.media .icon-edit {
+  right: 0;
+  top: 22px;
+  position: absolute;
+  z-index: 10;
+}
+.calendar-list .media-heading {
+  margin-bottom: 11px;
+}
+.calendar-list .timeago{
+  font-size: 14px;
+  color: #8192a0;
+  margin-bottom: 11px;
+}
+.calendar-list .timeago em{
+  color: #525f70;
+  font-style: normal;
+}
+.side-menu-left-menu .btn{
+}
+.empty-placehold,
+.discussion-placehold {
+  font-size: 32px;
+  color: rgb( 191, 191, 191 );
+  line-height: 0.875;
+  text-align: center;
+  padding: 10% 0;
+}

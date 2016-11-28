@@ -1,0 +1,9 @@
+.side-menu-left-menu
+  = form_tag(backoffice_users_path, id: 'users_filter', method: :get) do
+    .form-title-with-button Filter by Club
+    - @club_list.each do |key, value|
+      .checkbox
+        = check_box_tag 'filter[]', key, checked(key), { class: 'filter_checkbox' }
+        %label.ellipsis= value
+
+= javascript_include_tag 'filter_submit_form'

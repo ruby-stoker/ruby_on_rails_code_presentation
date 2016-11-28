@@ -1,0 +1,5 @@
+.col-sm-12.profile-main.tab-content
+  #general.colform.tab-pane.active{ role: 'tabpanel' }
+    .column-title= "Edit #{@user.name}"
+  = branded_form_for @user, url: backoffice_user_path(@user) do |f|
+    = render partial: 'backoffice/users/partials/form', locals: { f: f }

@@ -1,0 +1,40 @@
+.breadcrumb
+  =link_to 'Backoffice', backoffice_dashboard_path
+  %i.fa.fa-long-arrow-right{ 'aria-hidden': true }
+  %strong= t('backoffice.users')
+.row
+  .col-sm-2.side-menu-left-menu.profile-side
+    = render partial: 'backoffice/users/partials/sidebar'
+  .col-sm-10.profile-main.tab-content
+    #general
+      .form-title-with-button
+        = t('backoffice.users')
+        = link_to t('backoffice.create_new_admin'), new_backoffice_user_path, class: 'btn btn-primary pull-right'
+      %table.data-table.table.table-striped.table-bordered
+        %thead
+          %tr
+            %th= t('backoffice.name')
+            %th= t('backoffice.email')
+            %th= t('backoffice.club_subdomain')
+            %th= t('backoffice.role')
+            %th= t('backoffice.last_login_at')
+            %th
+        %tbody
+          - @users.each do |user|
+            %tr
+              %td= link_to user.name, backoffice_user_path(user)
+              %td= user.email
+              %td= user.club&.subdomain
+              %td= user.role
+              %td= user.last_login_at&.strftime('%y/%m/%d at %I:%M%p')
+              %td
+                - if user.role != 'moderator' && user.club.present?
+                  = link_to t('backoffice.set_as_moderator'), backoffice_set_moderator_path(user), method: :post, data: { confirm: 'Are you sure?'}
+        %tfoot
+          %tr
+            %th= t('backoffice.name')
+            %th= t('backoffice.email')
+            %th= t('backoffice.club_subdomain')
+            %th= t('backoffice.role')
+            %th= t('backoffice.last_login_at')
+            %th

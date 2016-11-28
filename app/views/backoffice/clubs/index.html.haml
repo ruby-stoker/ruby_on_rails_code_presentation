@@ -1,0 +1,40 @@
+.breadcrumb
+  =link_to t('backoffice.backoffice_title'), root_path
+  %i.fa.fa-long-arrow-right{ 'aria-hidden': true }
+  %strong= t('backoffice.clubs')
+.row
+  .col-sm-12.profile-main.tab-content
+    #general.colform.tab-pane.active{ role: 'tabpanel' }
+      .form-title-with-button
+        = t('backoffice.clubs')
+        = link_to t('backoffice.create_new_club'), new_backoffice_club_path, class: 'btn btn-primary pull-right'
+      %table.data-table.table.table-striped.table-bordered
+        %thead
+          %tr
+            %th= t('backoffice.club_page.club_id')
+            %th= t('backoffice.club_page.club_name')
+            %th= t('backoffice.subdomain')
+            %th= t('backoffice.club_page.users')
+            %th= t('backoffice.club_page.created_by')
+            %th= t('backoffice.club_page.created_at')
+            %th
+        %tbody
+          - @clubs.each do |club|
+            %tr
+              %td= club.id
+              %td= link_to club.name, backoffice_club_path(club)
+              %td= club.subdomain
+              %td= club.users.count
+              %td= User.find(club.created_by).name if club.created_by.present?
+              %td= club.created_at.strftime('%y/%m/%d at %I:%M%p')
+              %td
+                = link_to 'Edit club', edit_backoffice_club_path(club)
+        %tfoot
+          %tr
+            %th= t('backoffice.club_page.club_id')
+            %th= t('backoffice.club_page.club_name')
+            %th= t('backoffice.subdomain')
+            %th= t('backoffice.club_page.users')
+            %th= t('backoffice.club_page.created_by')
+            %th= t('backoffice.club_page.created_at')
+            %th

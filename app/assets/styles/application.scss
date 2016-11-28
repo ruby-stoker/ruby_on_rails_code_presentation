@@ -1,0 +1,43 @@
+@import "variables";
+@import "awesome-bootstrap-checkbox.css";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "bootstrap-sprockets";
+@import "bootstrap_and_overrides";
+@import 'bootstrap-datetimepicker';
+@import "loaders";
+@import "navbar";
+@import "side-menu";
+@import "search-bar";
+@import "member-box";
+@import "dataTables.bootstrap";
+@import "messages";
+@import "profile";
+@import "groups";
+@import "events";
+@import "photos";
+@import "uploads";
+@import "wall";
+@import "members";
+@import "discussion_folder";
+@import "calendars";
+@import "bootstrap-select";
+@import "dropzone";
+@import "dropzone-base";
+@import "notifications";
+@import "notifications_panel";
+@import "backoffice/forms";
+
+#brandmenu {
+  position: fixed;
+  width: 25%;
+  padding: 20px;
+}
+
+body {
+  position: relative;
+}
+
+pre {
+  border-radius: 0;
+}

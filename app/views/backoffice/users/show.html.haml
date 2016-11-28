@@ -1,0 +1,18 @@
+.col-sm-12.profile-main.tab-content
+  #general
+    .column-title= "User #{@user.name}"
+    %table.table.table-striped
+      %tr
+        %th= t('backoffice.users_page.first_name')
+        %td= @user.first_name
+      %tr
+        %th= t('backoffice.users_page.last_name')
+        %td= @user.last_name
+      %tr
+        %th= t('backoffice.role')
+        %td= @user.role
+      %tr
+        %th= t('backoffice.club')
+        %td= @user.club.name if @user.club.present?
+
+    =link_to t('backoffice.edit'), edit_backoffice_user_path, class: 'btn btn-primary pull-right'

@@ -1,0 +1,5 @@
+.col-sm-12.profile-main.tab-content
+  #general.colform.tab-pane.active{ role: 'tabpanel' }
+    .column-title= t('backoffice.create_new_club')
+  = branded_form_for @club, url: backoffice_clubs_path, html: { method: :post } do |f|
+    = render partial: 'backoffice/clubs/partials/form', locals: { f: f }

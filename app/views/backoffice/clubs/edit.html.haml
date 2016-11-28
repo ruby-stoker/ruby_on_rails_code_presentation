@@ -1,0 +1,5 @@
+.col-sm-12.profile-main.tab-content
+  #general.colform.tab-pane.active{ role: 'tabpanel' }
+    .column-title= "#{t('helpers.forms.edit')} #{@club.name}"
+  = branded_form_for @club, url: backoffice_club_path(@club) do |f|
+    = render partial: 'backoffice/clubs/partials/form', locals: { f: f }

@@ -1,0 +1,42 @@
+!!!
+%html{ lang: I18n.locale }
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Clubsite
+    = csrf_meta_tags
+    = action_cable_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
+    = yield :javascripts
+  %body
+    = link_to 'Skip to main content', '#content', class: 'sr-only sr-only-focusable'
+    %nav#header.navbar.navbar-default.navbar-inverse
+      .container
+        .navbar-header
+          %button{ class: 'navbar-toggle collapsed', data: { toggle: 'collapse',  target: '#navbar-menu-collapsed', :'aria-expanded' => 'false' } }
+            = fa 'fa-reorder fa-no-margin'
+          = link_to "Clubsite", root_path, class: 'navbar-brand'
+
+        #navbar-menu.navbar-collapse.navbar-left.hidden-xs
+          %ul.nav.navbar-nav
+            %li= link_to 'Clubs', backoffice_clubs_path
+            %li= link_to 'Users', backoffice_users_path
+
+        #navbar-menu-profile.navbar-collapse.navbar-right.hidden-xs
+          %ul.nav.navbar-nav
+            %li.dropdown
+              = link_to "#", class: 'dropdown-toggle profile-link', data: { toggle: 'dropdown', role: 'button', 'aria-haspopup': true, 'aria-expanded': false } do
+                = "Hi, #{current_user.name}"
+                = image_tag(get_avatar(current_user.avatar), alt: '', class: 'circle-profile-img')
+              %ul.dropdown-menu
+                %li= link_to 'Logout', sign_out_path
+        #navbar-menu-collapsed.navbar-collapse.collapse.navbar-right
+          %ul.nav.navbar-nav.visible-xs
+            %li= link_to 'Clubs', backoffice_clubs_path
+            %li= link_to 'Users', backoffice_users_path
+            %li= link_to 'Logout', sign_out_path
+
+    - flash.each do |name, msg|
+      = branded_alert(name.to_sym, msg)
+    .container
+      = yield
